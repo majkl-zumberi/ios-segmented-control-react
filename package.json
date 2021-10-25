@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -37,6 +37,20 @@
   },
   "name": "ios-segmented-control-react",
   "author": "majkl zumberi",
+  "description": "a simple react IOS like segmented control, with typescript support using latest react conventions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/majkl-zumberi/ios-segmented-control-react.git"
+  },
+  "homepage": "https://github.com/majkl-zumberi/ios-segmented-control-react",
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-component",
+    "segmented-control",
+    "ios",
+    "ios-segmented-control"
+  ],
   "module": "dist/ios-segmented-control-react.esm.js",
   "size-limit": [
     {
