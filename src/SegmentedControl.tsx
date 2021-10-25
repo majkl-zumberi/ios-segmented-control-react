@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
-
+import styles from './index.css';
 export interface SegmentControlProps {
   /**the segments of the segmented control */
   segments: Array<{
@@ -47,14 +47,14 @@ export const SegmentedControl: React.VFC<SegmentControlProps> = ({
     segments.map((segment) => {
       if (segment.value === selectedSegment) {
         return (
-          <li key={segment.value} className="selected">
+          <li key={segment.value} className={`${styles['selected']} selected`}>
             {segment?.label ?? ''}
           </li>
         );
       }
       if (segment.disabled) {
         return (
-          <li key={segment.value} className="disabled">
+          <li key={segment.value} className={`${styles['disabled']} disabled`}>
             {segment?.label ?? ''}
           </li>
         );
@@ -67,7 +67,10 @@ export const SegmentedControl: React.VFC<SegmentControlProps> = ({
     });
 
   return (
-    <div className="segmented-control-container" {...props}>
+    <div
+      className={`${styles['segmented-control-container']} segmented-control-container`}
+      {...props}
+    >
       <ul>{renderSegments()}</ul>
     </div>
   );
